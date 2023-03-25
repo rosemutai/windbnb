@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +46,7 @@ form {
 }
 
 input,
-button {
+.nav-form button {
   height: 8rem;
   padding: 3rem;
   background-color: #fff;
@@ -83,5 +84,87 @@ button.add-guest {
 }
 
 /* main styles */
+.location-days {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
 
+h2.location {
+  color: #333;
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin: 1rem;
+}
 
+p.days {
+  color: #4F4F4F;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.apartments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  width: 96%;
+  height: 60rem;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card img {
+  height: 75%;
+  border-radius: 5rem;
+}
+
+.card .description {
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.description button {
+  border-radius: 4rem;
+  background-color: #fff;
+  color: #4F4F4F;
+  border: 1px solid #4F4F4F;
+  padding: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p.entire-apartment {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #828282;
+  padding-left: 1rem;
+}
+
+p.title {
+  /* padding-left: 1rem; */
+  font-weight: 600;
+  font-size: 3rem;
+  color: #333;
+  padding-top: 1rem;
+}
+
+.rating {
+  margin: 0 1rem 0 auto;
+}
+
+p.rating-num {
+  color: #4F4F4F;
+  font-size: 2.4rem;
+}
