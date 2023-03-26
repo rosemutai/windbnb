@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +32,6 @@ body {
   margin-bottom: 1rem;
 }
 
-
 form {
   width: 85%;
   margin: 2rem auto 1rem auto;
@@ -43,7 +42,7 @@ form {
   grid-template-columns: 2fr 1fr 1fr;
   align-items: center;
   gap: 2px;
-  background-color:rgba(242, 242, 242, 1);;
+  background-color: rgba(242, 242, 242, 1);
 }
 
 span.search-text {
@@ -70,7 +69,6 @@ span.search-text {
   flex-direction: column;
   gap: 5px;
   width: 100%;
-  
 }
 
 .active input {
@@ -86,7 +84,7 @@ span.search-text {
   justify-content: space-between;
   font-size: 2rem;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .active #location-input {
@@ -153,14 +151,6 @@ button {
   font-size: 2rem;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-}
-
 i.search-icon {
   font-size: 3rem;
   color: rgba(235, 87, 87, 0.9);
@@ -168,7 +158,7 @@ i.search-icon {
 
 button.add-guest {
   font-size: 2rem;
-  color: rgba(189, 189, 189, 1);;
+  color: rgba(189, 189, 189, 1);
 }
 
 /* main styles */
@@ -182,13 +172,13 @@ h2.location {
   color: #333;
   font-size: 2.8rem;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 1rem;
 }
 
 p.days {
-  color: #4F4F4F;
-  font-family: 'Montserrat', sans-serif;
+  color: #4f4f4f;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 2rem;
   margin: 1rem;
@@ -209,7 +199,7 @@ p.days {
   flex-direction: column;
   /* justify-content: space-between; */
   padding-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .card img {
@@ -220,14 +210,14 @@ p.days {
 .card .description {
   display: flex;
   align-items: center;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .description button {
   border-radius: 4rem;
   background-color: #fff;
-  color: #4F4F4F;
-  border: 1px solid #4F4F4F;
+  color: #4f4f4f;
+  border: 1px solid #4f4f4f;
   padding: 1.4rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -250,19 +240,103 @@ p.title {
 
 .rating {
   margin: 0 1rem 0 auto;
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   padding: 0;
 }
 
 p.rating-num {
-  color: #4F4F4F;
-  font-size: 2.4rem;
+  color: #4f4f4f;
+  font-size: 1.8rem;
+  padding-top: 0;
+  margin-top: 0;
 }
 
-i.star-icon {
+/* i.star-icon {
   font-size: 3.4rem;
   color: rgba(235, 87, 87, 0.9);
   padding: 0;
   margin: 0 !important;
+} */
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  input,
+  .nav-form button {
+    height: 4rem;
+    padding: 1rem;
+  }
+  
+  form {
+    margin: 2rem 0 1rem 0;
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2px;
+    background-color: rgba(242, 242, 242, 1);
+  }
+
+  input::placeholder,
+  #guests-input::placeholder {
+    font-size: 1rem;
+  }
+
+  i.search-icon {
+    font-size: 2rem;
+    color: rgba(235, 87, 87, 0.9);
+  }
+
+  .apartments {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    row-gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  .card {
+    height: 30rem;
+    border-radius: 1rem;
+    margin: 0 auto 1rem auto;
+  }
+
+  .card img {
+    height: 75%;
+    border-radius: 2rem;
+  }
+
+  .description button {
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  p.entire-apartment {
+    font-size: 1.2rem;
+  }
+
+  i.star-icon {
+    font-size: 2.4rem;
+    margin-top: 4px;
+  }
+
+  .rate {
+    margin-bottom: -28px;
+  }
+
+  p.title {
+    /* padding-left: 1rem; */
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #333;
+    padding-top: 1rem;
+  }
 }
