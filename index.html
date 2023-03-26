@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Windbnb</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windbnb</title>
 
-  <!-- google icons -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/logo.svg" alt="" srcset="">
-      </div>
-      <section class="form">
-        <form class="nav-form">
-          <input type="text" name="search" id=""
-            placeholder="Helnsiki, Finland"
-          >
-          <button type="submit" class="add-guest">Add guests</button>
-          <button class="search-btn">
-            <span><i class="material-icons search-icon">search</i></span>
-          </button>
-        </form>
+    <!-- google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.svg" alt="" srcset="" />
+        </div>
+        <section class="form" id="formSection">
+          <div class="edit-close-icon" id="editClose">
+            <p>Edit your Search</p>
+            <i class="material-icons close-icon">close</i>
+          </div>
+          <form class="nav-form" id="navForm">
+            <input
+              type="text"
+              name="search"
+              id="location-input"
+              placeholder="Helnsiki, Finland"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="text"
+              class="add-guest"
+              id="guests-input"
+              placeholder="Add guests"
+              autocomplete="off"
+              required
+            />
+            <button
+              type="submit"
+              name="submitButton"
+              class="search-btn"
+              id="searchBtn"
+            >
+              <span><i class="material-icons search-icon">search</i></span>
+              <span class="search-text">Search</span>
+            </button>
+          </form>
+        </section>
+      </nav>
+    </header>
+
+    <main id="mainContent">
+      <section class="location-days">
+        <h2 class="location">Stays in Finland</h2>
+        <p class="days">12+ stays</p>
       </section>
-  </nav>
-  </header>
 
-  <main>
-    <section class="location-days">
-      <h2 class="location">Stays in Finland</h2>
-      <p class="days">12+ stays</p>
-    </section>
+      <section class="apartments" id="apartments-section"></section>
+    </main>
 
-    <section class="apartments" id="apartments-section"></section>
-  </main>
-
-  <script type="module" src="app.js"></script>
-</body>
+    <script type="module" src="app.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
