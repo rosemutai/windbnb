@@ -7,13 +7,16 @@ fetch('./stays.json')
       const cardContents = `
             <img src=${apartment.photo} alt="">
             <div class="description">
-              <button class="superhost">SUPER HOST</button>
+              ${apartment.superHost ? '<button class="superhost">SUPER HOST</button>' : ''}
               <p class="entire-apartment">
                 ${apartment.type}
                 <span class="beds">. ${apartment.beds} beds</span>
               </p>
               <div class="rating">
-                <p class="rating-num">${apartment.rating}</p>
+                <p class="rating-num">
+                  <span><i class="material-icons star-icon">star</i></span>
+                  ${apartment.rating}
+                </p>
               </div>
             </div>
             <div class="name">
@@ -25,5 +28,6 @@ fetch('./stays.json')
       cardDiv.classList.add('card')
       apartmentsSection.append(cardDiv);
 
-    })}
+    })
+  }
 )
