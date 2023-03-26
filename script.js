@@ -23,16 +23,63 @@ const searchStays = () => {
       const filteredData = results.filter((item) => {
         const cityMatch = searchedLocation.value ? item.city.toLowerCase().includes(searchedLocation.value.toLowerCase()) : true;
         const maxGuestsMatch = guests.value ? item.maxGuests == guests.value : true;
+        
         return cityMatch && maxGuestsMatch;
       });
-      console.log(filteredData);
+      return filteredData;
 
     })
-  
+}
 
+
+const displayFilteredStays = async () => {
+
+  const staysSection = document.getElementById('mainContent');
+  staysSection.innerHTML = ''
+  const stays = await searchStays()
+
+  stays.forEach(stay => {
+
+    const content = `
+      <section class="location-days">
+        <h2 class="location">Stays in ${stay.city}</h2>
+        <p class="days">
+          Math.min(${stay.maxGuests})+ stays
+        </p>
+      </section>
+      <section class="apartments" id="apartments-section">
+        <div class='card'>
+          <img src=${stay.photo} alt="">
+            <div class="description">
+              ${stay.superHost ? '<button class="superhost">SUPER HOST</button>' : ''}
+              <p class="entire-apartment">
+                ${stay.type}
+                <span class="beds">. ${stay.beds} beds</span>
+              </p>
+              <div class="rating">
+                <p class="rating-num">
+                  <i class="material-icons star-icon">star</i>
+                  <span class="rate">${stay.rating}</span>
+                </p>
+              </div>
+            </div>
+            <div class="name">
+              <p class='title'>${stay.title}</p>
+            </div>
+        </div>
+      </section>
+    `;
+
+    const section = document.createElement('section');
+    section.innerHTML = content;
+    staysSection.append(section)
+  })
+  
 }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  searchStays();
+  displayFilteredStays();
+  formSection.classList.remove('active');
+  editClose.style.display = 'none';
 })
