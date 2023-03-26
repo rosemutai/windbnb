@@ -73,6 +73,11 @@ span.search-text {
 
 .active input {
   width: 100%;
+  border-radius: 0;
+}
+
+.active input:focus {
+  outline: none;
 }
 
 .active .edit-close-icon {
@@ -272,7 +277,7 @@ p.rating-num {
     height: 4rem;
     padding: 1rem;
   }
-  
+
   form {
     margin: 2rem 0 1rem 0;
     border-radius: 2rem;
