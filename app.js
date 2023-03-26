@@ -14,8 +14,8 @@ fetch('./stays.json')
               </p>
               <div class="rating">
                 <p class="rating-num">
-                  <span><i class="material-icons star-icon">star</i></span>
-                  ${apartment.rating}
+                  <i class="material-icons star-icon">star</i>
+                  <span class="rate">${apartment.rating}</span>
                 </p>
               </div>
             </div>
