@@ -21,11 +21,9 @@ const searchStays = () => {
     .then(results => {
 
       const filteredData = results.filter((item) => {
-        const cityMatch = searchedLocation.value ? item.city.toLowerCase().includes(searchedLocation.value.toLowerCase()) : true;
-        const maxGuestsMatch = guests.value ? item.maxGuests == guests.value : true;
-        
-        return cityMatch && maxGuestsMatch;
-      });
+        return (item.city.toLowerCase().includes(searchedLocation.value.toLowerCase())&&
+        item.maxGuests == guests.value)
+      }); 
       return filteredData;
 
     })
@@ -37,8 +35,7 @@ const displayFilteredStays = async () => {
   const staysSection = document.getElementById('mainContent');
   staysSection.innerHTML = ''
   const stays = await searchStays()
-
-  stays.forEach(stay => {
+  await stays.forEach(stay => {
 
     const content = `
       <section class="location-days">
