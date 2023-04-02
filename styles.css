@@ -190,15 +190,16 @@ p.days {
 }
 
 .apartments {
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 0 1rem;
 }
 
 .card {
-  width: 96%;
-  height: 60rem;
+  width: 96% !important;
+  height: 40rem;
   margin: 0 auto 3rem auto;
   display: flex;
   flex-direction: column;
@@ -208,8 +209,11 @@ p.days {
 }
 
 .card img {
+  width: 100%;
   height: 75%;
   border-radius: 5rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .card .description {
@@ -226,13 +230,13 @@ p.days {
   padding: 1.4rem;
   font-weight: 700;
   letter-spacing: 1px;
+  margin-right: 1rem;
 }
 
 p.entire-apartment {
   font-weight: 500;
   font-size: 2rem;
   color: #828282;
-  padding-left: 1rem;
 }
 
 p.title {
@@ -258,12 +262,12 @@ p.rating-num {
   margin-top: 0;
 }
 
-/* i.star-icon {
+i.star-icon {
   font-size: 3.4rem;
   color: rgba(235, 87, 87, 0.9);
   padding: 0;
   margin: 0 !important;
-} */
+}
 
 @media only screen and (min-width: 768px) {
   .navbar {
