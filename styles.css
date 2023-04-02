@@ -57,7 +57,7 @@ span.search-text {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 60%;
   height: 100vh;
   background-color: #fff;
   z-index: 12;
@@ -242,7 +242,7 @@ p.entire-apartment {
 p.title {
   /* padding-left: 1rem; */
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #333;
   padding-top: 1rem;
 }
@@ -267,6 +267,15 @@ i.star-icon {
   color: rgba(235, 87, 87, 0.9);
   padding: 0;
   margin: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  header,
+  main,
+  .apartments {
+    width: 60vw;
+    overflow-x: hidden;
+  }
 }
 
 @media only screen and (min-width: 768px) {
