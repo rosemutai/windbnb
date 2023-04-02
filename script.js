@@ -1,4 +1,4 @@
-
+import stays from './stays.js'
 const form = document.getElementById('navForm');
 const formSection = document.getElementById('formSection');
 const editClose = document.getElementById('editClose');
@@ -16,32 +16,27 @@ searchedLocation.addEventListener('click', () => {
 
 const searchStays = () => {
 
-  fetch('./stays.json')
-    .then(data => data.json())
-    .then(results => {
-
-      const filteredData = results.filter((item) => {
+  const filteredData = stays.filter((item) => {
         return (item.city.toLowerCase().includes(searchedLocation.value.toLowerCase())&&
-        item.maxGuests == guests.value)
-      }); 
-      return filteredData;
-
-    })
+        item.maxGuests >= guests.value)
+  }); 
+  return filteredData;
+  
 }
-
 
 const displayFilteredStays = async () => {
 
   const staysSection = document.getElementById('mainContent');
   staysSection.innerHTML = ''
   const stays = await searchStays()
+  console.log(stays);
   await stays.forEach(stay => {
 
     const content = `
       <section class="location-days">
         <h2 class="location">Stays in ${stay.city}</h2>
         <p class="days">
-          Math.min(${stay.maxGuests})+ stays
+          ${stay.maxGuests} Guests
         </p>
       </section>
       <section class="apartments" id="apartments-section">
@@ -51,13 +46,11 @@ const displayFilteredStays = async () => {
               ${stay.superHost ? '<button class="superhost">SUPER HOST</button>' : ''}
               <p class="entire-apartment">
                 ${stay.type}
-                <span class="beds">. ${stay.beds} beds</span>
+                ${stay.beds ? '<span class="beds">.`${stays.bed}` beds</span>' : '0 beds' }
               </p>
               <div class="rating">
-                <p class="rating-num">
-                  <i class="material-icons star-icon">star</i>
-                  <span class="rate">${stay.rating}</span>
-                </p>
+                <i class="material-icons star-icon">star</i>
+                <span class="rate">${stay.rating}</span>
               </div>
             </div>
             <div class="name">
