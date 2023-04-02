@@ -46,7 +46,7 @@ const displayFilteredStays = async () => {
               ${stay.superHost ? '<button class="superhost">SUPER HOST</button>' : ''}
               <p class="entire-apartment">
                 ${stay.type}
-                ${stay.beds ? '<span class="beds">.`${stays.bed}` beds</span>' : '0 beds' }
+                ${stay.beds ? '<span class="beds">.{{stays.bed}} beds</span>' : '0 beds' }
               </p>
               <div class="rating">
                 <i class="material-icons star-icon">star</i>
@@ -72,4 +72,11 @@ form.addEventListener('submit', (e) => {
   displayFilteredStays();
   formSection.classList.remove('active');
   editClose.style.display = 'none';
+})
+
+const closeIcon = document.getElementById('closeIcon');
+closeIcon.addEventListener('click', () => {
+  formSection.classList.remove('active');
+  editClose.style.display = 'none';
+
 })
