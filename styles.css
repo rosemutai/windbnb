@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: #fff;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -59,7 +59,7 @@ span.search-text {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: red;
+  background-color: #fff;
   z-index: 12;
   padding: 3rem;
 }
@@ -81,15 +81,15 @@ span.search-text {
 }
 
 .active .edit-close-icon {
-  background-color: yellow;
   display: flex !important;
   align-items: center;
   color: #000;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
 .active #location-input {
@@ -186,7 +186,7 @@ p.days {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 2rem;
-  margin: 1rem;
+  margin: 1rem 3rem 1rem 1rem;
 }
 
 .apartments {
@@ -347,5 +347,46 @@ i.star-icon {
     font-size: 1.5rem;
     color: #333;
     padding-top: 1rem;
+  }
+
+  .active form {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #fff;
+  }
+
+  .active input {
+    border-radius: 0;
+    width: 33%;
+  }
+
+  .active .activebutton {
+    position: absolute;
+    top: 10.1rem;
+    right: 6rem;
+    background: #eb5757e6;
+    color: #fff;
+    border-radius: 1rem;
+    width: 10%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    gap: 5px;
+  }
+
+  .active #location-input,
+  .active #guests-input {
+    border-radius: 1rem;
+  }
+
+  .active i.search-icon {
+    font-size: 2.5rem;
+  }
+
+  .active input:focus {
+    outline: #000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
