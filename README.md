@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">{Windbnb}</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -56,6 +56,8 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 ## Features
 
+- View the list of apartments in Finland.
+- Search the apartments by city and filter by the number of guests.
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD) was to build an application to complete the given user stories.
