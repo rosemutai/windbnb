@@ -211,7 +211,7 @@ p.days {
 }
 
 .description button {
-  border-radius: 4rem;
+  border-radius: 1rem;
   background-color: #fff;
   color: #4f4f4f;
   border: 1px solid #4f4f4f;
@@ -223,7 +223,7 @@ p.days {
 
 p.entire-apartment {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #828282;
 }
 
