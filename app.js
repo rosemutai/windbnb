@@ -10,13 +10,14 @@ stays.forEach((apartment) => {
       ${apartment.superHost ? '<button class="superhost">SUPER HOST</button>' : ''}
       <p class="entire-apartment">
         ${apartment.type}
-        <span class="beds">. ${apartment.beds} beds</span>
+        ${apartment.beds ? `<span class="beds">. ${apartment.beds} beds</span>` : ''}
+        
       </p>
     </div>
     <div class="name">
       <p class='title'>${apartment.title}</p>
     </div>
-  `;
+  `;  
   const cardDiv = document.createElement('div');
   cardDiv.innerHTML = cardContents;
   cardDiv.classList.add('card')
